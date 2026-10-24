@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-script: "Pinyon Script", cursive;
+  --font-handwriting: "Caveat", cursive;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+  --color-paper: #F7F0E6;
+  --color-paper-light: #FAF6F0;
+  --color-blush: #E9C8CE;
+  --color-blush-light: #F7EAEC;
+  --color-sage: #A8B7A0;
+  --color-sage-light: #E2E8DF;
+  --color-butter: #E9D59C;
+  --color-butter-light: #FAF3E0;
+  --color-ink: #55463F;
+  --color-ink-muted: #84756F;
+  --color-dark-bg: #080808;
+  --color-cake-dark: #121013;
+}
+
+/* Subtle custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(85, 70, 63, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(85, 70, 63, 0.35);
+}
+
+/* Paper grain overlay */
+.paper-grain {
+  background-image: radial-gradient(rgba(85, 70, 63, 0.04) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Subtle torn edge simulation */
+.torn-top {
+  mask-image: radial-gradient(circle at 10px -5px, transparent 12px, white 13px);
+  mask-size: 20px 100%;
+}
+
+/* Washi tape effect */
+.washi-tape {
+  position: absolute;
+  height: 22px;
+  background: rgba(233, 200, 206, 0.75);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(1px);
+  z-index: 10;
+  border-left: 2px dashed rgba(255, 255, 255, 0.6);
+  border-right: 2px dashed rgba(255, 255, 255, 0.6);
+}
+
+.washi-sage {
+  background: rgba(168, 183, 160, 0.7);
+}
+
+.washi-butter {
+  background: rgba(233, 213, 156, 0.75);
+}
+
+/* Polaroid drop shadow */
+.polaroid-shadow {
+  box-shadow: 0 12px 28px -6px rgba(85, 70, 63, 0.15),
+              0 4px 10px -2px rgba(85, 70, 63, 0.08);
+}
+
+/* Metallic balloon text shimmer */
+@keyframes metallicShimmer {
+  0% {
+    filter: drop-shadow(0 4px 10px rgba(255, 215, 0, 0.25)) brightness(1);
+  }
+  50% {
+    filter: drop-shadow(0 6px 16px rgba(255, 235, 150, 0.45)) brightness(1.15);
+  }
+  100% {
+    filter: drop-shadow(0 4px 10px rgba(255, 215, 0, 0.25)) brightness(1);
+  }
+}
+
+.metallic-glow {
+  animation: metallicShimmer 4s ease-in-out infinite;
+}
+
+/* Gentle float animation */
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(1.5deg);
+  }
+}
+
+.animate-gentle-float {
+  animation: gentleFloat 5s ease-in-out infinite;
+}
+
+@keyframes flameFlicker {
+  0%, 100% {
+    opacity: 0.92;
+    transform: scale(1);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.04) translateY(-1px);
+  }
+  70% {
+    opacity: 0.88;
+    transform: scale(0.98);
+  }
+}
+
+.flame-flicker {
+  animation: flameFlicker 2.5s ease-in-out infinite;
+}
+
+/* Seamless blend for cake photo */
+img[src*="cake.jpg"] {
+  mix-blend-mode: lighten;
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 55%, transparent 100%);
+  mask-image: radial-gradient(ellipse at center, #000 55%, transparent 100%);
+}
+
