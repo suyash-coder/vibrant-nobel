@@ -1,7 +1,6 @@
 import { CinematicOpening } from './components/CinematicOpening'
 import { BirthdayNote } from './components/BirthdayNote'
 import { PhotoScrapbook } from './components/PhotoScrapbook'
-import { ScrapbookEnding } from './components/ScrapbookEnding'
 import { ContinuousEdgeBorders } from './components/ContinuousEdgeBorders'
 
 export function App() {
@@ -29,9 +28,6 @@ export function App() {
 
         {/* STAGE 3: PINTEREST PHOTO SCRAPBOOK */}
         <PhotoScrapbook />
-
-        {/* ELEGANT CONCLUSION */}
-        <ScrapbookEnding />
       </div>
     </main>
   )

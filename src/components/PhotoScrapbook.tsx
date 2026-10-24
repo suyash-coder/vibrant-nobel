@@ -14,7 +14,7 @@ export function PhotoScrapbook() {
 
   return (
     <section
-      className="relative z-10 w-full py-16 sm:py-24 px-4 sm:px-6 bg-transparent"
+      className="relative z-10 w-full pt-16 sm:pt-24 pb-28 sm:pb-36 px-4 sm:px-6 bg-transparent"
       aria-label="Photo Scrapbook"
     >
 
